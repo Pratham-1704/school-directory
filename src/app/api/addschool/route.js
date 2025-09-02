@@ -13,7 +13,7 @@ export async function POST(req) {
 console.log(name, address, city, state, contact, email_id, image);
     const db = await connectToDatabase();
     await db.execute(
-      "INSERT INTO schools (name, address, city, state, contact, image,email_id) VALUES (?, ?, ?, ?, ?, ?, ?)",
+      "INSERT INTO schools (name, address, city, state, contact, email_id, image) VALUES (?, ?, ?, ?, ?, ?, ?)",
       [name, address, city, state, contact, email_id, image]
     );
 
