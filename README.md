@@ -66,6 +66,10 @@ Now, open http://localhost:3000
 
 ![Show School Page](image-2.png)
 
+mobile view
+![home](<school pic1.jpg>) 
+![Add school](<school pic2.jpg>)
+![Show school ](<school pic3.jpg>)
 
 
 📂 Project Structure
