@@ -4,118 +4,130 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        alignItems: "center",
-        minHeight: "100vh",
-        background: "linear-gradient(135deg, #f9fafb, #eef2ff)",
-        fontFamily: "Segoe UI, Arial, sans-serif",
-      }}
-    >
+    <div className="container">
       {/* Header */}
-      <header
-        style={{
-          width: "100%",
-          padding: "1rem 2rem",
-          background: "#0f766e", // teal green
-          color: "#ffffff",
-          fontSize: "1.8rem",
-          fontWeight: "600",
-          textAlign: "center",
-          letterSpacing: "0.5px",
-          boxShadow: "0px 2px 8px rgba(0,0,0,0.15)",
-        }}
-      >
-        🎓 School Management Portal
-      </header>
+      <header className="header">🎓 School Management Portal</header>
 
       {/* Main Content */}
-      <main
-        style={{
-          flex: 1,
-          display: "flex",
-          flexDirection: "column",
-          gap: "2rem",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "2rem",
-          textAlign: "center",
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "2.8rem",
-            fontWeight: "700",
-            color: "#0f172a", // dark gray-blue
-            textShadow: "1px 1px 3px rgba(0,0,0,0.1)",
-          }}
-        >
-          Welcome to School Management
-        </h1>
+      <main className="main">
+        <h1 className="title">Welcome to School Management</h1>
 
-        <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
+        <div className="button-group">
           <Link href="/addSchools">
-            <button
-              style={{
-                padding: "1rem 2.5rem",
-                borderRadius: "10px",
-                background: "#0284c7", // sky blue
-                color: "#fff",
-                border: "none",
-                fontWeight: "600",
-                fontSize: "1rem",
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-                boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
-              }}
-              onMouseOver={(e) => (e.target.style.background = "#0369a1")}
-              onMouseOut={(e) => (e.target.style.background = "#0284c7")}
-            >
-              ➕ Add School
-            </button>
+            <button className="btn btn-blue">➕ Add School</button>
           </Link>
 
           <Link href="/showschools">
-            <button
-              style={{
-                padding: "1rem 2.5rem",
-                borderRadius: "10px",
-                background: "#16a34a", // green
-                color: "#fff",
-                border: "none",
-                fontWeight: "600",
-                fontSize: "1rem",
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-                boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
-              }}
-              onMouseOver={(e) => (e.target.style.background = "#15803d")}
-              onMouseOut={(e) => (e.target.style.background = "#16a34a")}
-            >
-              🏫  Show Schools
-            </button>
+            <button className="btn btn-green">🏫 Show Schools</button>
           </Link>
         </div>
       </main>
 
       {/* Footer */}
-      <footer
-        style={{
-          width: "100%",
-          padding: "1rem 2rem",
-          background: "#0f172a", // dark gray-blue
-          color: "#e2e8f0", // light gray text
-          textAlign: "center",
-          fontSize: "0.95rem",
-          letterSpacing: "0.3px",
-          boxShadow: "0px -2px 8px rgba(0,0,0,0.15)",
-        }}
-      >
+      <footer className="footer">
         © {new Date().getFullYear()} School Management | All Rights Reserved
       </footer>
+
+      <style jsx>{`
+        .container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          min-height: 100vh;
+          background: linear-gradient(135deg, #f9fafb, #eef2ff);
+          font-family: Segoe UI, Arial, sans-serif;
+        }
+
+        .header {
+          width: 100%;
+          padding: 1rem;
+          background: #0f766e;
+          color: #ffffff;
+          font-size: 1.5rem;
+          font-weight: 600;
+          text-align: center;
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .main {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          justify-content: center;
+          align-items: center;
+          padding: 1.5rem;
+          text-align: center;
+        }
+
+        .title {
+          font-size: 2rem;
+          font-weight: 700;
+          color: #0f172a;
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-group {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          justify-content: center;
+          width: 100%;
+        }
+
+        .btn {
+          flex: 1 1 auto;
+          min-width: 140px;
+          padding: 0.9rem 1.5rem;
+          border-radius: 10px;
+          border: none;
+          font-weight: 600;
+          font-size: 1rem;
+          color: #fff;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-blue {
+          background: #0284c7;
+        }
+        .btn-blue:hover {
+          background: #0369a1;
+        }
+
+        .btn-green {
+          background: #16a34a;
+        }
+        .btn-green:hover {
+          background: #15803d;
+        }
+
+        .footer {
+          width: 100%;
+          padding: 1rem;
+          background: #0f172a;
+          color: #e2e8f0;
+          text-align: center;
+          font-size: 0.9rem;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 600px) {
+          .header {
+            font-size: 1.2rem;
+            padding: 0.8rem;
+          }
+          .title {
+            font-size: 1.6rem;
+          }
+          .btn {
+            font-size: 0.9rem;
+            padding: 0.8rem 1rem;
+          }
+        }
+      `}</style>
     </div>
   );
 }

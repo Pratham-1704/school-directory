@@ -74,8 +74,8 @@ export default function AddSchool() {
               {...register("name", {
                 required: "Name is required",
                 pattern: {
-                  value: /^[A-Za-z\s]+$/,
-                  message: "Only letters allowed",
+                  value: /^[A-Za-z\s.,'\u2019-]+$/,
+                  message: "Only letters, spaces, dot (.), comma (,), hyphen (-), and apostrophe (') are allowed"
                 },
               })}
               placeholder="School Name"
