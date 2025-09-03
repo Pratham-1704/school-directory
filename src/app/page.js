@@ -4,130 +4,37 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="container">
+    <div className="flex flex-col justify-between items-center min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50 font-sans">
       {/* Header */}
-      <header className="header">🎓 School Management Portal</header>
+      <header className="w-full p-4 bg-teal-700 text-white text-2xl font-semibold text-center shadow-md">
+        🎓 School Management Portal
+      </header>
 
       {/* Main Content */}
-      <main className="main">
-        <h1 className="title">Welcome to School Management</h1>
+      <main className="flex flex-col flex-1 items-center justify-center gap-8 px-4 text-center">
+        <h1 className="text-3xl md:text-4xl font-bold text-slate-900 drop-shadow-sm">
+          Welcome to School Management
+        </h1>
 
-        <div className="button-group">
+        <div className="flex flex-wrap justify-center gap-4 w-full max-w-md">
           <Link href="/addSchools">
-            <button className="btn btn-blue">➕ Add School</button>
+            <button className="flex-1 min-w-[140px] px-6 py-3 rounded-xl font-semibold text-white bg-sky-600 hover:bg-sky-700 shadow-md transition">
+              ➕ Add School
+            </button>
           </Link>
 
           <Link href="/showschools">
-            <button className="btn btn-green">🏫 Show Schools</button>
+            <button className="flex-1 min-w-[140px] px-6 py-3 rounded-xl font-semibold text-white bg-green-600 hover:bg-green-700 shadow-md transition">
+              🏫 Show Schools
+            </button>
           </Link>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="footer">
+      <footer className="w-full p-3 bg-slate-900 text-slate-200 text-sm text-center">
         © {new Date().getFullYear()} School Management | All Rights Reserved
       </footer>
-
-      <style jsx>{`
-        .container {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: center;
-          min-height: 100vh;
-          background: linear-gradient(135deg, #f9fafb, #eef2ff);
-          font-family: Segoe UI, Arial, sans-serif;
-        }
-
-        .header {
-          width: 100%;
-          padding: 1rem;
-          background: #0f766e;
-          color: #ffffff;
-          font-size: 1.5rem;
-          font-weight: 600;
-          text-align: center;
-          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .main {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          gap: 2rem;
-          justify-content: center;
-          align-items: center;
-          padding: 1.5rem;
-          text-align: center;
-        }
-
-        .title {
-          font-size: 2rem;
-          font-weight: 700;
-          color: #0f172a;
-          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .button-group {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 1rem;
-          justify-content: center;
-          width: 100%;
-        }
-
-        .btn {
-          flex: 1 1 auto;
-          min-width: 140px;
-          padding: 0.9rem 1.5rem;
-          border-radius: 10px;
-          border: none;
-          font-weight: 600;
-          font-size: 1rem;
-          color: #fff;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-blue {
-          background: #0284c7;
-        }
-        .btn-blue:hover {
-          background: #0369a1;
-        }
-
-        .btn-green {
-          background: #16a34a;
-        }
-        .btn-green:hover {
-          background: #15803d;
-        }
-
-        .footer {
-          width: 100%;
-          padding: 1rem;
-          background: #0f172a;
-          color: #e2e8f0;
-          text-align: center;
-          font-size: 0.9rem;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 600px) {
-          .header {
-            font-size: 1.2rem;
-            padding: 0.8rem;
-          }
-          .title {
-            font-size: 1.6rem;
-          }
-          .btn {
-            font-size: 0.9rem;
-            padding: 0.8rem 1rem;
-          }
-        }
-      `}</style>
     </div>
   );
 }
