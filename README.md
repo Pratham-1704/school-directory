@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+📘 School Management Portal
+📌 Project Overview
 
-## Getting Started
+The School Management Portal is a simple web application built with Next.js that allows users to manage school records efficiently.
+Users can add new schools and view existing schools in a clean and responsive interface.
 
-First, run the development server:
+🚀 Features
 
-```bash
+🎓 Add Schools – Add school details (name, address, contact info, etc.).
+
+🏫 Show Schools – View the list of schools in a structured card layout.
+
+📱 Responsive UI – Works smoothly on desktop and mobile devices.
+
+☁️ Image Upload Support (via Cloudinary).
+
+🌐 Database Integration (MySQL hosted on Aiven).
+
+🛠️ Tech Stack
+
+Frontend: Next.js, React, Tailwind CSS
+
+Backend: Node.js (API Routes)
+
+Database: MySQL (Aiven Cloud)
+
+Storage: Cloudinary (for images)
+
+Deployment: Vercel
+
+⚙️ Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/school-management-portal.git
+cd school-management-portal
+
+2️⃣ Install Dependencies
+npm install
+
+3️⃣ Configure Environment Variables
+
+Create a `.env.local` file in the project root and add the following variables.  
+⚠️ These are **sample values** – replace them with your own credentials if you want to run the project locally.
+
+DB_HOST=your-database-host
+DB_PORT=your-database-port
+DB_USER=your-database-username
+DB_PASSWORD=your-database-password
+DB_NAME=your-database-name
+
+CLOUDINARY_CLOUD_NAME=your-cloud-name
+CLOUDINARY_API_KEY=your-api-key
+CLOUDINARY_API_SECRET=your-api-secret
+
+4️⃣ Run the Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Now, open http://localhost:3000
+ in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📸 Screenshots
 
-## Learn More
+(Add screenshots of your homepage, Add School page, Show Schools page here.)
 
-To learn more about Next.js, take a look at the following resources:
+📂 Project Structure
+school-management-portal/
+│── src/app/
+│   ├── page.js          # Homepage
+│   ├── addSchools/      # Add School page
+│   ├── showschools/     # Show Schools page
+│   └── api/             # API routes
+│
+│── public/              # Static assets
+│── package.json
+│── README.md
+│── .env.local
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✅ How to Use
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Navigate to the homepage.
 
-## Deploy on Vercel
+Click “Add School” to add new school details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Click “Show Schools” to view the list of schools.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+👨‍💻 Author
+
+Prathamesh Khape
+📧 Email: khape3572@gmail.com
+🔗 LinkedIn: https://www.linkedin.com/in/prathamesh-khape-514162237/
