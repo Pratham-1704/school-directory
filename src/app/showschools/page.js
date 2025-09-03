@@ -83,7 +83,7 @@ export default function ShowSchools() {
               textShadow: "1px 1px 3px rgba(0,0,0,0.1)",
             }}
           >
-            📚 Schools List
+            🏫 Schools List
           </h2>
 
           <div
