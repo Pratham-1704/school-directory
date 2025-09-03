@@ -31,6 +31,7 @@ export async function POST(req) {
       uploadStream.end(buffer);
     });
   } catch (err) {
+    console.error("Cloudinary Upload Error:", err);
     return new Response(JSON.stringify({ error: err.message }), { status: 500 });
   }
 }
