@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Input, Card, Row, Col, Modal, Spin, Button } from "antd";
+import Link from "next/link";
 
 export default function ShowSchools() {
   const [schools, setSchools] = useState([]);
@@ -67,7 +68,11 @@ export default function ShowSchools() {
           boxShadow: "0px 2px 8px rgba(0,0,0,0.15)",
         }}
       >
-        🎓 School Management Portal
+        {/* 🎓
+         School Management Portal */}
+          <Link href="/" className="hover:text-yellow-300 transition">
+          🎓 School Management Portal
+        </Link>
       </header>
 
       {/* Main Content */}

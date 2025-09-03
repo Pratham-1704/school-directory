@@ -2,6 +2,8 @@
 
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import Link from "next/link";
+
 
 export default function AddSchool() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -58,7 +60,10 @@ export default function AddSchool() {
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-50 to-indigo-50 font-sans">
       {/* Header */}
       <header className="w-full p-4 bg-teal-700 text-white text-2xl font-semibold text-center shadow-md">
-        🎓 School Management Portal
+        {/* 🎓 School Management Portal */}
+        <Link href="/" className="hover:text-yellow-300 transition">
+          🎓 School Management Portal
+        </Link>
       </header>
 
       {/* Main Form Section */}
