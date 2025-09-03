@@ -60,16 +60,18 @@ Now, open http://localhost:3000
 
 📸 Screenshots
 ## Desktop Views
-
-<img src="image.png" alt="Main Page" width="400" style="margin:10px"/>
-<img src="image-1.png" alt="Add School Page" width="400" style="margin:10px"/>
-<img src="image-2.png" alt="Show School Page" width="400" style="margin:10px"/>
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="image.png" alt="Main Page" width="300"/>
+  <img src="image-1.png" alt="Add School Page" width="300"/>
+  <img src="image-2.png" alt="Show School Page" width="300"/>
+</div>
 
 ## Mobile Views
-
-<img src="school pic1.jpg" alt="Home Mobile View" width="250" style="margin:10px"/>
-<img src="school pic2.jpg" alt="Add School Mobile View" width="250" style="margin:10px"/>
-<img src="school pic3.jpg" alt="Show School Mobile
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="school pic1.jpg" alt="Home Mobile View" width="200"/>
+  <img src="school pic2.jpg" alt="Add School Mobile View" width="200"/>
+  <img src="school pic3.jpg" alt="Show School Mobile View" width="200"/>
+</div>
 
 📂 Project Structure
 src/
