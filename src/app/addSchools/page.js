@@ -148,12 +148,13 @@ export default function AddSchool() {
             <input
               {...register("email_id", {
                 pattern: {
-                  value: /^\S+@\S+$/i,
-                  message: "Enter a valid email",
+                  value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/,
+                  message: "Enter a valid lowercase email",
                 },
               })}
               placeholder="Email"
               className="border p-3 w-full rounded-lg focus:ring-2 focus:ring-blue-400"
+              onInput={(e) => (e.target.value = e.target.value.toLowerCase())}
             />
             {errors.email_id && (
               <p className="text-red-500 text-sm">{errors.email_id.message}</p>
