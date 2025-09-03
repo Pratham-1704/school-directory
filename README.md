@@ -59,18 +59,17 @@ Now, open http://localhost:3000
  in your browser.
 
 📸 Screenshots
+## Desktop Views
 
-![Main Page](image.png)
+<img src="image.png" alt="Main Page" width="400" style="margin:10px"/>
+<img src="image-1.png" alt="Add School Page" width="400" style="margin:10px"/>
+<img src="image-2.png" alt="Show School Page" width="400" style="margin:10px"/>
 
-![Add School Page](image-1.png)
+## Mobile Views
 
-![Show School Page](image-2.png)
-
-mobile view
-![home](<school pic1.jpg>) 
-![Add school](<school pic2.jpg>)
-![Show school ](<school pic3.jpg>)
-
+<img src="school pic1.jpg" alt="Home Mobile View" width="250" style="margin:10px"/>
+<img src="school pic2.jpg" alt="Add School Mobile View" width="250" style="margin:10px"/>
+<img src="school pic3.jpg" alt="Show School Mobile
 
 📂 Project Structure
 src/
