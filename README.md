@@ -60,20 +60,34 @@ Now, open http://localhost:3000
 
 📸 Screenshots
 
-(Add screenshots of your homepage, Add School page, Show Schools page here.)
+![Main Page](image.png)
+
+![Add School Page](image-1.png)
+
+![Show School Page](image-2.png)
+
+
 
 📂 Project Structure
-school-management-portal/
-│── src/app/
-│   ├── page.js          # Homepage
-│   ├── addSchools/      # Add School page
-│   ├── showschools/     # Show Schools page
-│   └── api/             # API routes
-│
-│── public/              # Static assets
-│── package.json
-│── README.md
-│── .env.local
+src/
+ └── app/
+      ├── addSchools/       # Page to add schools
+      │    └── page.js
+      ├── showschools/      # Page to show schools
+      │    └── page.js
+      ├── api/              # API routes
+      │    ├── addschool/
+      │    │    └── route.js
+      │    └── getschools/
+      │         └── route.js
+      ├── layout.js         # Root layout for app
+      └── page.js           # Homepage
+ └── globals.css           # Global CSS
+lib/                       # Helper functions or DB connection
+.env.local                 # Environment variables
+.gitignore
+eslint.config.js
+
 
 ✅ How to Use
 
